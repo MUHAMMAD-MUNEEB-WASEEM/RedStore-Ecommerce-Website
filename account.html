@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+        <title>All Products - RedStore</title>
+        <link rel="stylesheet" href="CSS/style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"><!--poppins font from google fonts website then select popping select some types and then embed-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!--making navigation bar consist of logo and menu links-->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="RedStore logo" width=125px>
+                </div>
+    
+                <!--menu-->
+                 <nav> 
+                    <ul id="MenuItems"><!--use this id in js-->                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" alt="cart" width=30px height=30px><!--adding cart image in navigation section -->
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"><!--this is the menu icon which  will be displayed on smaller screens with 3 lines, and when we click on it, it will open upside down or like dropdown menu, to open like this we have pass one menutoggle function to it which we have written in the end in js-->
+            </div>
+        </div>
+ <!----------------Account Page---------------->
+    <div class="account-page">
+      <div class="container">
+            <div class="row">
+
+                <div class="col-2"><!--1 column for image and other for form-->
+                    <img src="images/image1.png">
+                </div>
+                
+                <div class="col-2">
+                    <div class="form-container"><!--column for form-->
+                        <div class="form-btn"><!--button for login and register-->
+                            <span onclick="login()">Login</span><!--use js-->
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator"><!--red orange bar-->
+                        </div>
+
+                        <form id="LoginForm"><!--login form-->
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="Submit" class="btn">Login</button>
+                            <a href="">Forgot Password?</a>
+                        </form>
+
+                        <form id="RegForm"><!--registraition form-->
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="Submit" class="btn">Register</button>
+                        </form>
+
+
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-------footer------->
+    <div class="footer">
+        <div class="container"><!-- it will follow same styling as of header-->
+            <div class="row">
+                
+                <!--it contains 4 columns col1 contains text and col2 contain image col3 contains useful links and col4 contains social media links-->
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone.</p>
+                   
+                   <!---add images of play store and appstore in 1st column-->
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>   
+                
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <!--add horizontal line and copyright text along with clickable link-->
+            <hr>
+            <a href="" class="copyright">Copyright 2020   - Made with ❤️ by Muhammad Muneeb Waseem</a>
+        </div>
+    </div>         
+
+    <!-----------------JS----------------------->
+    <script>
+        //declare variable MenuItems which take ul having id "MenuItems"
+        
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";//by default, we have set menu or dropdown menu height to 0px, means it is close by default
+        
+        function menutoggle()//this is the function which we have called above in nav which works on small devices and users click on it
+        {
+            if (MenuItems.style.maxHeight =="0px")//when user click on it and if it is closed or its height is 0px, then it will open or it should have heigt of 200px upon clicking
+            {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else//if user not clicked or it has already opened, then it will upon clicking again closed
+            {
+                MenuItems.style.maxHeight = "0px" 
+            }
+        
+        }
+    </script>    
+
+    <!------------JS for toggle form------------->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+            function register(){//by 
+
+                RegForm.style.transform = "translateX(0px)";//in Css, by default we set translatex(100) so by default, we are at register, thats why when person clicks on register, everything stayed there stayed there
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";//As mentioned above, in css translatex(100) is set, so for indicator to be by default on register, we set it to 100px;
+            }
+
+            function login(){
+
+                RegForm.style.transform = "translateX(300px)";//when person clicks on login, login form shift to 300px forward and register form goes 300px outside, but we cannot see it as we use overflow=hidden in css, if want to see, then remove overflow property.
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";//as by default on 100px or on register, so when clicks on login, it comes back to 0 px
+            }
+
+
+
+    </script>
+
+    </body>
+
+</html>

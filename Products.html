@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"><!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+        <title>All Products - RedStore</title>
+        <link rel="stylesheet" href="CSS/style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"><!--poppins font from google fonts website then select popping select some types and then embed-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!--making navigation bar consist of logo and menu links-->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="RedStore logo" width=125px>
+                </div>
+    
+                <!--menu-->
+                 <nav> 
+                    <ul id="MenuItems"><!--use this id in js-->                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" alt="cart" width=30px height=30px><!--adding cart image in navigation section -->
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"><!--this is the menu icon which  will be displayed on smaller screens with 3 lines, and when we click on it, it will open upside down or like dropdown menu, to open like this we have pass one menutoggle function to it which we have written in the end in js-->
+            </div>
+        </div>
+
+    <!--what we have done here is that we have copied everything from main index.html file and to show products only in this page, we have removed every thin except navbar and footer and now we will modify it according to our requirements-->
+     <!--Featured Products-->
+     <!--using same class small container to maintain same styling-->
+     
+    <div class="small container">
+
+        <!--we have create an another row to add title and give user dropdown list with four options so they can select what they want-->
+        <div class="row row-2">
+            <h2>All Products
+
+            </h2>
+             <select>
+                 <option>Default Sorting</option>
+                 <option>Sort by Price</option>
+                 <option>Sort by Popularity</option>
+                 <option>Sort by Sale</option>
+             </select>
+        </div>
+
+         <!--This is the same class which already have index.html consisting of 4 columns-->
+        <div class="row">
+             <!--this time we will make 4 columns-->
+     
+             <!--it contains 4 different products with heading h4, image, price <p> and rating star-->
+             <div class="col-4">
+                 <img src="Images/product-1.jpg"><!--product img-->
+                 <h4>Red Printed T-shirt</h4><!--product title-->
+                 <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                    <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                 </div>
+                 <p>$50.00</p><!--product price-->
+             </div>
+
+             <div class="col-4">
+                <img src="Images/product-2.jpg"><!--product img-->
+                <h4>Red Printed T-shirt</h4><!--product title-->
+                <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                   <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$50.00</p><!--product price-->
+            </div>
+
+            <div class="col-4">
+                <img src="Images/product-3.jpg"><!--product img-->
+                <h4>Red Printed T-shirt</h4><!--product title-->
+                <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                   <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                   <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$50.00</p><!--product price-->
+            </div>
+
+            <div class="col-4">
+                <img src="Images/product-4.jpg"><!--product img-->
+                <h4>Red Printed T-shirt</h4><!--product title-->
+                <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                   <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+                </div>
+                <p>$50.00</p><!--product price-->
+            </div>
+         </div>
+
+         <!--above are the products of featured prodcuts row, as the page is for all products, so I have added latest products row too here  -->
+
+         <div class="row">
+            <!--this time we will make 4 columns-->
+    
+            <!--it contains 4 different products with heading h4, image, price <p> and rating star-->
+            <div class="col-4">
+                <img src="Images/product-5.jpg"><!--product img-->
+                <h4>Red Printed T-shirt</h4><!--product title-->
+                <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                   <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star" aria-hidden="true"></i>
+                   <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$50.00</p><!--product price-->
+            </div>
+
+            <div class="col-4">
+               <img src="Images/product-6.jpg"><!--product img-->
+               <h4>Red Printed T-shirt</h4><!--product title-->
+               <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                  <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+               </div>
+               <p>$50.00</p><!--product price-->
+                </div>
+
+            <div class="col-4">
+               <img src="Images/product-7.jpg"><!--product img-->
+               <h4>Red Printed T-shirt</h4><!--product title-->
+               <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                  <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+               </div>
+               <p>$50.00</p><!--product price-->
+             </div>
+
+            <div class="col-4">
+               <img src="Images/product-8.jpg"><!--product img-->
+               <h4>Red Printed T-shirt</h4><!--product title-->
+               <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                  <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+               </div>
+               <p>$50.00</p><!--product price-->
+             </div>
+        </div>    
+       <div class="row">
+           <div class="col-4">
+               <img src="Images/product-9.jpg"><!--product img-->
+               <h4>Red Printed T-shirt</h4><!--product title-->
+               <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                  <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+               </div>
+               <p>$50.00</p><!--product price-->
+           </div>
+
+           <div class="col-4">
+              <img src="Images/product-10.jpg"><!--product img-->
+              <h4>Red Printed T-shirt</h4><!--product title-->
+              <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                 <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <p>$50.00</p><!--product price-->
+          </div>
+
+          <div class="col-4">
+              <img src="Images/product-11.jpg"><!--product img-->
+              <h4>Red Printed T-shirt</h4><!--product title-->
+              <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                 <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                 <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <p>$50.00</p><!--product price-->
+          </div>
+
+          <div class="col-4">
+              <img src="Images/product-12.jpg"><!--product img-->
+              <h4>Red Printed T-shirt</h4><!--product title-->
+              <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                 <i class="fa fa-star" aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+              </div>
+              <p>$50.00</p><!--product price-->
+          </div>
+       </div>
+       
+`       <!--add page buttons in small container section-->
+       <div class="page-btn">
+           <span>1</span><!--no of pages-->
+           <span>2</span>
+           <span>3</span>
+           <span>4</span>
+           <span>&#8594;</span><!--and arrow in the end-->
+
+       </div>
+    </div>
+ 
+    <!-------footer------->
+    <div class="footer">
+        <div class="container"><!-- it will follow same styling as of header-->
+            <div class="row">
+                
+                <!--it contains 4 columns col1 contains text and col2 contain image col3 contains useful links and col4 contains social media links-->
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone.</p>
+                   
+                   <!---add images of play store and appstore in 1st column-->
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>   
+                
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <!--add horizontal line and copyright text along with clickable link-->
+            <hr>
+            <a href="" class="copyright">Copyright 2020   - Made with ❤️ by Muhammad Muneeb Waseem</a>
+        </div>
+    </div>         
+
+    <!-----------------JS----------------------->
+    <script>
+        //declare variable MenuItems which take ul having id "MenuItems"
+        
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";//by default, we have set menu or dropdown menu height to 0px, means it is close by default
+        
+        function menutoggle()//this is the function which we have called above in nav which works on small devices and users click on it
+        {
+            if (MenuItems.style.maxHeight =="0px")//when user click on it and if it is closed or its height is 0px, then it will open or it should have heigt of 200px upon clicking
+            {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else//if user not clicked or it has already opened, then it will upon clicking again closed
+            {
+                MenuItems.style.maxHeight = "0px" 
+            }
+        
+        }
+    </script>    
+    
+    </body>
+
+</html>
